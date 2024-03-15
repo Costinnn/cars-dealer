@@ -1,0 +1,186 @@
+import { isUniqueAcrossAllDocuments } from "../lib/isUniqueAcrossAllDocuments";
+
+export const carPostSchema = {
+  type: "document",
+  name: "carPost",
+  title: "Car Post",
+  fields: [
+    {
+      type: "string",
+      name: "brand",
+      title: "Brand",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "model",
+      title: "Model",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "boolean",
+      name: "newPost",
+      title: "Available in section: New Posts",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "boolean",
+      name: "recommended",
+      title: "Available in section: Recommended",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "category",
+      title: "Category",
+      options: {
+        list: ["auto", "moto", "utility"],
+      },
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "carType",
+      title: "Car Type",
+      options: {
+        list: [
+          "all",
+          "atv",
+          "moto",
+          "coupe",
+          "cabrio",
+          "hatchback",
+          "sedan",
+          "break",
+          "suv",
+          "pickup",
+          "bus",
+          "utilitara",
+        ],
+      },
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "slug",
+      name: "slug",
+      title: "Post ID",
+      options: { source: "model", isUnique: isUniqueAcrossAllDocuments },
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "number",
+      name: "price",
+      title: "Price in euro",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "boolean",
+      name: "vat",
+      title: "Deductible VAT",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "fuel",
+      title: "Fuel",
+      options: {
+        list: ["Diesel", "Gasoline"],
+      },
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "number",
+      name: "km",
+      title: "Kilometers",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "number",
+      name: "hp",
+      title: "Horsepower",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "number",
+      name: "engineSize",
+      title: "Engine capacity",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "gearbox",
+      title: "Gearbox",
+      options: {
+        list: ["Manual", "Automatic"],
+      },
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "date",
+      name: "regDate",
+      title: "First registration date",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "date",
+      name: "listingDate",
+      title: "Post listing date",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "countryOrigin",
+      title: "Country of origin",
+      validation: (rule: any) => rule.required(),
+    },
+
+    {
+      type: "string",
+      name: "condition",
+      title: "Car condition",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "string",
+      name: "location",
+      title: "Location",
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "array",
+      name: "standardOptions",
+      title: "Standard options",
+      of: [{ type: "string" }],
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "array",
+      name: "extraOptions",
+      title: "Extra options",
+      of: [{ type: "string" }],
+      validation: (rule: any) => rule.required(),
+    },
+
+    {
+      type: "array",
+      name: "description",
+      title: "Description",
+      of: [{ type: "string" }],
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "array",
+      name: "images",
+      title: "Images",
+      of: [{ type: "image" }],
+      validation: (rule: any) => rule.required(),
+    },
+    {
+      type: "reference",
+      name: "agent",
+      title: "Sales Agent",
+      to: [{ type: "salesAgent" }],
+      validation: (rule: any) => rule.required(),
+    },
+  ],
+};

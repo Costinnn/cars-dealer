@@ -1,0 +1,100 @@
+// BREAKPOINTS 800px 1200px
+//  h1: 20 - 25 - 35
+//  h2 : 18 - 22 - 25
+
+:root {
+    --main-color1: #10141a;
+    --main-color2: #ffffff;
+  
+    --main-color3: #f3f3f3;
+    --main-color4: #e4e4e4;
+    --main-color5: #f9f9f9;
+  
+    --second-color1: #b8b8b8;
+    --second-color2: #8f8f8f;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-no1);
+  }
+  
+  body {
+    width: calc(100vw - (100vw - 100%));
+    max-width: calc(100vw - (100vw - 100%));
+    background-color: var(--main-color3);
+  }
+  
+  .rootlayout {
+    width: calc(100vw - (100vw - 100%));
+    max-width: 100vw !important;
+    position: relative;
+    overflow-x: hidden !important;
+  }
+  
+  /* GENERAL POSITIONING */
+  .section_wide {
+    width: 100%;
+  }
+  
+  .section_narrow {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 0 auto;
+  }
+  
+  .first_pagesection {
+    padding-top: 90px;
+  }
+  
+  .white_box {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--main-color2);
+    -webkit-box-shadow: 7px 7px 20px -3px rgba(228, 228, 228, 1);
+    -moz-box-shadow: 7px 7px 20px -3px rgba(228, 228, 228, 1);
+    box-shadow: 7px 7px 20px -3px rgba(228, 228, 228, 1);
+  }
+  
+  /* DEFAUL STYLES CANCELLED */
+  
+  li {
+    list-style: none;
+  }
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: var(--main-color1);
+    text-decoration: none;
+  }
+  
+  button {
+    border: none;
+    background: none;
+  }
+  
+  // BUTTON STYLES
+  
+  .btn_black {
+    color: var(--main-color3) !important;
+    background-color: var(--main-color1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  .btn_gray {
+    color: var(--main-color1) !important;
+    background-color: var(--second-color1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    //font-size: 14px;
+    text-align: center;
+  }
+  

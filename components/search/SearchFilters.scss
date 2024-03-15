@@ -1,0 +1,95 @@
+.searchfilters {
+  padding: 0 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      .brand,
+      .price,
+      .year {
+        position: relative;
+        width: 100%;
+        max-width: 250px;
+        button {
+          width: 100%;
+          text-align: start;
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          padding: 5px 10px;
+          border-radius: 20px;
+          border: 1px solid var(--second-color2);
+          color: var(--main-color1);
+        }
+        svg {
+          margin-left: 5px;
+        }
+        .rotate_svg {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        .dropdown {
+          position: absolute;
+          z-index: 3;
+          background-color: var(--main-color2);
+          padding: 10px;
+          border-radius: 20px;
+          left: 0;
+          top: 40px;
+          max-height: 200px;
+          overflow: hidden;
+          overflow-y: scroll;
+          > li {
+            margin-top: 3px;
+            > span {
+              margin: 5px 0;
+              padding: 2px 0;
+              display: block;
+              font-size: 14px;
+              font-weight: 600;
+              color: var(--second-color2);
+            }
+          }
+          .hidden {
+            display: none;
+          }
+        }
+
+        .open {
+          display: block;
+        }
+        .close {
+          display: none;
+        }
+      }
+      .model_input {
+        width: calc(100% - 20px);
+        max-width: 250px;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid var(--second-color2);
+        color: var(--main-color1);
+      }
+      .model_input::placeholder {
+        color: var(--main-color1);
+      }
+    }
+    > a {
+      min-width: min(300px, 60vw);
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}

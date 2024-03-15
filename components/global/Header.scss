@@ -1,0 +1,118 @@
+.main_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--main-color3);
+
+  @media screen and (min-width: 1440px) {
+    left: calc(50vw - 720px);
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @media screen and (min-width: 801px) {
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+
+    .menu_img {
+      background-color: var(--main-color2);
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+      @media screen and (min-width: 801px) {
+        display: none;
+      }
+    }
+
+    .menu {
+      @media screen and (max-width: 800px) {
+        position: absolute;
+        z-index: 5;
+        width: 100vw;
+        max-width: 400px;
+        height: 100svh;
+        top: 0;
+        right: 0;
+        background-color: var(--main-color5);
+        transition: width 1s cubic-bezier(0.18, 0.89, 0.32, 1);
+
+        .close_img {
+          position: absolute;
+          top: 25px;
+          right: 20px;
+          background-color: var(--main-color3);
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          margin-top: 20vh;
+          li {
+            text-align: center;
+            a {
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+      @media screen and (min-width: 801px) {
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            a {
+              font-weight: 600;
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .close_img {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .menu_closed {
+        width: 0 !important;
+        overflow: hidden;
+        transition: width 1s cubic-bezier(0.18, 0.89, 0.32, 1);
+      }
+    }
+  }
+}

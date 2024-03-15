@@ -1,0 +1,54 @@
+.hero_home {
+  position: relative;
+  height: 60vh;
+
+  .title {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 17vh;
+    font-weight: 900;
+    color: var(--second-color2);
+  }
+  .subtitle {
+    margin-top: 12vh;
+    text-align: center;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--second-color1);
+  }
+  .hero_img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  @media screen and (min-width: 500px) {
+    .title {
+      font-size: 50px;
+      padding-top: 10vh;
+    }
+    .subtitle {
+      margin-top: 25vh;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    height: 75vh;
+    .title {
+      padding-top: 13vh;
+      font-size: 60px;
+    }
+    .subtitle {
+      margin-top: 35vh;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    height: 90vh;
+    .title {
+      font-size: 90px;
+      padding-top: 17vh;
+    }
+    .subtitle {
+      margin-top: 35vh;
+    }
+  }
+}
