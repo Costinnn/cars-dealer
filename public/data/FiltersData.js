@@ -27,7 +27,7 @@ export const categoryArr = [
 ];
 
 export const brandArr = [
-  { brand: "Toate" },
+  { brand: "All" },
   { brand: "Alfa Romeo" },
   { brand: "Aston Martin" },
   { brand: "Audi" },
@@ -96,6 +96,6 @@ export const typeArr = [
   { type: "cabrio", img: cabrioImg, title: "Cabrio" },
   { type: "suv", img: suvImg, title: "SUV" },
   { type: "pickup", img: pickupImg, title: "Pickup" },
-  { type: "utilitara", img: utilityImg, title: "Utility" },
+  { type: "utility", img: utilityImg, title: "Utility" },
   { type: "bus", img: busImg, title: "Bus" },
 ];

@@ -4,6 +4,7 @@ export type SvgTypes = {
 };
 
 export type FilteredPostsTypes = {
+  category?: string;
   type?: string;
   brand?: string;
   model?: string;

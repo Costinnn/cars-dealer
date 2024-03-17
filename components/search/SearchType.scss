@@ -29,6 +29,11 @@
         color: var(--second-color2);
         font-weight: 600;
       }
+      .active {
+        text-decoration: underline;
+        color: var(--main-color1);
+        font-weight: 800;
+      }
     }
   }
 }

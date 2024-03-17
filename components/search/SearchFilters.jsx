@@ -1,16 +1,14 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 import ArrowDownSvg from "../svg/ArrowDownSvg";
+
 import { brandArr, pricesArray, yearsArray } from "@/public/data/FiltersData";
 
 import "./SearchFilters.scss";
-import Link from "next/link";
 
 const SearchFilters = () => {
-  const [pricesArr, setPriceArr] = useState(pricesArray);
-  const [yearsArr, setYearsArr] = useState(yearsArray);
-
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [price, setPrice] = useState({ min: 0, max: 0 });
@@ -18,7 +16,7 @@ const SearchFilters = () => {
     min: 0,
     max: 0,
   });
-  const [km, setKm] = useState({ min: 0, max: 300000 });
+  //const [km, setKm] = useState({ min: 0, max: 300000 });
 
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     brand: false,
@@ -117,7 +115,7 @@ const SearchFilters = () => {
                 isDropdownOpen.priceMin ? "open" : "close"
               }`}
             >
-              {pricesArr.map((item) => (
+              {pricesArray.map((item) => (
                 <li
                   key={item}
                   className={`${
@@ -147,7 +145,7 @@ const SearchFilters = () => {
                 isDropdownOpen.priceMax ? "open" : "close"
               }`}
             >
-              {pricesArr.toReversed().map((item) => (
+              {pricesArray.toReversed().map((item) => (
                 <li
                   key={item}
                   className={`${
@@ -180,7 +178,7 @@ const SearchFilters = () => {
                 isDropdownOpen.yearMin ? "open" : "close"
               }`}
             >
-              {yearsArr.map((item) => (
+              {yearsArray.map((item) => (
                 <li
                   key={item}
                   className={`${
@@ -210,7 +208,7 @@ const SearchFilters = () => {
                 isDropdownOpen.yearMax ? "open" : "close"
               }`}
             >
-              {yearsArr.toReversed().map((item) => (
+              {yearsArray.toReversed().map((item) => (
                 <li
                   key={item}
                   className={`${

@@ -17,7 +17,7 @@ const Hero = () => {
         className="hero_img"
       />
       <h2 className="subtitle">
-        Cauta masina dorita in stocul nostru, sau comand-o online!
+        Find your desired car in our stock or order it online!
       </h2>
     </section>
   );

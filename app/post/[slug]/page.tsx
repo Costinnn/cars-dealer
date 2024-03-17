@@ -8,7 +8,11 @@ import PostGallery from "@/components/pages/post/PostGallery";
 import PostDetails from "@/components/pages/post/PostDetails";
 import RecomCarPosts from "@/components/carpost/RecomCarPosts";
 
-const page = async ({ params }: { params: { slug: string } }) => {
+type SlugType = {
+  params: { slug: string };
+};
+
+const page = async ({ params }: SlugType) => {
   const dbData = await client.fetch<SanityDocument>(
     `*[_type == "carPost" && slug.current == "${params.slug}"]
     {model, brand, category, carType,

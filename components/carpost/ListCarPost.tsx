@@ -9,9 +9,12 @@ import "./ListCarPost.scss";
 
 const ListCarPost = async () => {
   const dbData = await client.fetch<SanityDocument>(
-    `*[_type == "carPost"]{model,brand,category,carType,"slug":slug.current,price,fuel,km,hp,engineSize,gearbox,regDate,images[0]{"url":asset->url}}`
+    `*[_type == "carPost"]
+    {model, brand, "slug":slug.current, 
+    price, fuel, km, hp, engineSize, gearbox, regDate, 
+    images[0]{"url":asset->url}}`
   );
-  
+
   return (
     <section className="list_carpost section_narrow">
       {dbData.map((car: any) => (

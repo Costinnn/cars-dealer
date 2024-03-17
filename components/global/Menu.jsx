@@ -41,7 +41,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              href="/filteredPosts?type=auto"
+              href="/filteredPosts?category=auto"
               onClick={() => setIsMenuOpen(false)}
             >
               <CarSvg /> Autos
@@ -49,7 +49,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              href="/filteredPosts?type=utility"
+              href="/filteredPosts?category=utility"
               onClick={() => setIsMenuOpen(false)}
             >
               <VanSvg /> Utility
@@ -57,7 +57,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              href="/filteredPosts?type=moto"
+              href="/filteredPosts?category=moto"
               onClick={() => setIsMenuOpen(false)}
             >
               <MotoSvg /> Bikes

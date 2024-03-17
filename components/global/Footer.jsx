@@ -59,13 +59,13 @@ const Footer = () => {
             <h3>Fast links</h3>
           </li>
           <li>
-            <Link href="/filteredPosts?type=auto">Autos</Link>
+            <Link href="/filteredPosts?category=auto">Autos</Link>
           </li>
           <li>
-            <Link href="/filteredPosts?type=utility">Utility</Link>
+            <Link href="/filteredPosts?category=utility">Utility</Link>
           </li>
           <li>
-            <Link href="/filteredPosts?type=moto">Bikes</Link>
+            <Link href="/filteredPosts?category=moto">Bikes</Link>
           </li>
         </ul>
 

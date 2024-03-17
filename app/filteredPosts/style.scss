@@ -1,3 +1,36 @@
 .page-filteredPosts {
   margin-top: 100px;
+  h1 {
+    text-align: center;
+    color: var(--second-color2);
+    font-weight: 800;
+    padding: 10px;
+    @media screen and (min-width: 750px) {
+      font-size: 50px;
+    }
+  }
+  .searchfilters {
+    margin-top: 20px;
+  }
+
+  .filterlist_carpost {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (min-width: 750px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: 1400px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 }
